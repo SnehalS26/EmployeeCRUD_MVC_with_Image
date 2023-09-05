@@ -1,0 +1,33 @@
+﻿@model EmployeeCRUD_MVC.Models.Department
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h4>Edit Department</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Did" class="control-label"></label>
+                <input asp-for="Did" class="form-control" />
+                <span asp-validation-for="Did" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DName" class="control-label"></label>
+                <input asp-for="DName" class="form-control" />
+                <span asp-validation-for="DName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
